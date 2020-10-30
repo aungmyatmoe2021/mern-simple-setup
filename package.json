@@ -1,0 +1,35 @@
+{
+  "name": "mern-simple-setup",
+  "version": "1.0.0",
+  "description": "Simple Start development for MERN",
+  "main": "index.js",
+  "author": "Aung Myat Moe",
+  "license": "MIT",
+  "dependencies": {
+    "@hot-loader/react-dom": "17.0.0-rc.2",
+    "express": "4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "3.6.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-hot-loader": "4.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "@babel/preset-react": "7.10.4",
+    "babel-loader": "8.1.0",
+    "nodemon": "2.0.4",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-middleware": "3.7.2",
+    "webpack-hot-middleware": "2.25.0",
+    "webpack-node-externals": "2.5.2"
+  },
+  "scripts": {
+    "development": "nodemon",
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "NODE_ENV=production node ./dist/server.generated.js"
+  }
+}
